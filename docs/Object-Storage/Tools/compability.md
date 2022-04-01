@@ -43,3 +43,4 @@ These tools are -- _to our knowledge_ -- not working with Contabo's Object Stora
   As an alternative please use [Cyberduck](/docs/Object-Storage/Tools/cyberduck).
 * Plesk: is by default only supporting ftp(s). Also existing remote storage extensions are not allowing the proper configuration.
 * cPanel / WHM: the `S3Compatible` is not compatible. As cPanel / WHM supports specifying a backup destination folder [mounting](/docs/Object-Storage/HowTo/mount) the Object Storage to that backup folder could be a workaround.
+* Sonatype Nexus OSS 3.38.1-01: Looks like available signature methods in Nexus (S3SignerType, AWSS3V4SignerType) are not supported by storage backend. While a S3 blob storage can be configured, any attempt to upload files to it fails with error `null (Service: Amazon S3; Status Code: 403; Error Code: SignatureDoesNotMatch; Request ID: ****; S3 Extended Request ID: ****; Proxy: null)`
